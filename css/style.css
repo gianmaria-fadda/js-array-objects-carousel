@@ -19,3 +19,37 @@ html {
     margin: 0 auto;
 }
 
+img {
+    max-width: 100%;
+}
+
+/*
+    MAIN
+*/
+
+main .col .images-container > img {
+    margin-top: 200px;
+    height: 400px;
+    width: 1000px;
+    object-fit: contain;
+    z-index: 1;
+    display: none;
+}
+
+main .col .images-container > img.active {
+    display: block;
+}
+
+main .col .buttons > i:first-child {
+    top: 400px;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+}
+
+main .col .buttons > i:last-child {
+    top: 400px;
+    right: 0px;
+    z-index: 2;
+    cursor: pointer;
+}
