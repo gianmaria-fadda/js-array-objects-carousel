@@ -27,29 +27,50 @@ img {
     MAIN
 */
 
-main .col .images-container > img {
-    margin-top: 200px;
+main .col .images-container {
+    position: relative;
     height: 400px;
     width: 1000px;
-    object-fit: contain;
-    z-index: 1;
+}
+
+main .col .image-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     display: none;
 }
 
-main .col .images-container > img.active {
+main .col .image-slide.active {
     display: block;
+}
+
+main .col .image-slide img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+main .col .description {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 2;
 }
 
 main .col .buttons > i:first-child {
     top: 400px;
-    left: 0;
-    z-index: 2;
+    left: 10px;
+    z-index: 3;
     cursor: pointer;
 }
 
 main .col .buttons > i:last-child {
     top: 400px;
-    right: 0px;
-    z-index: 2;
+    right: 10px;
+    z-index: 3;
     cursor: pointer;
 }
