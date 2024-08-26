@@ -62,6 +62,9 @@ nextButton.addEventListener('click', function () {
     
         document.querySelector('.image-slide:nth-child(' + currentlyActiveImg + ')').classList.add('active');
     }
+    else {
+        currentlyActiveImg = 0;
+    }
 });
 
 const prevButton = document.getElementById('prev-button');
@@ -72,5 +75,8 @@ prevButton.addEventListener('click', function () {
         currentlyActiveImg--;
     
         document.querySelector('.image-slide:nth-child(' + currentlyActiveImg + ')').classList.add('active');
+    }
+    else {
+        currentlyActiveImg = images.length - 1;
     }
 });
